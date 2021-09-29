@@ -77,7 +77,7 @@ function fechar2() {
 function abrir2() {
     var teste = document.getElementById("teste");
     var teste2 = document.getElementById("teste2");
-    teste2.style.transition = "1s";
+    teste2.style.transition = "1s"; 
     teste.style.display = "block";
     teste2.style.display = "block";
     teste2.style.width = "60vh";
@@ -141,3 +141,119 @@ function suma() {
 //         mecher();
 //     },500);
 // }
+
+// function palavraNova(palavra, chave) {
+//     var alf = "abcdefghijklmnopqrstuvwxyz";
+//     //for (i = 0; i < alf.length; i++){
+//         // console.log(alf[i]);
+//     var letrasP = [];
+//     var letrasA = [];
+//     for (n = 0; n < palavra.length; n++){
+//             // console.log("--" + palavra[n] + "--");
+//             letrasP[n] = palavra[n];
+//             // console.log("--" + palavra[i] + "--");
+//             // console.log("--" + alf[n] + "--");
+//             // console.log("--" + alf[i] + "--");
+//     }
+//     for (i = 0; i < alf.length; i++){
+//         letrasP.forEach(item => {
+//             if (item == alf[i]) {
+//                 letrasA[n] = item;
+//             }
+//         });
+//     }
+//     console.log(letrasP + letrasA);
+//     //}
+// }
+// palavraNova('palavra');
+
+function contaLetras(string, letra) {
+    // Escreva aqui seu código
+    var letras = "";
+    for (n = 0; n < string.length; n++) {
+        if (string[n] == letra) {
+            letras += string[n];
+        }
+    }
+    console.log(letras.length);
+}
+console.log(contaLetras("addnogrupoooo", 'o'));
+
+
+function trocaVogais(string) {
+    var valor = '';
+    for (i = 0; i < string.length; i++){
+        if (string[i] === 'a' || string[i] === 'A' ||
+            string[i] === 'e' || string[i] === 'E' ||
+            string[i] === 'i' || string[i] === 'I' ||
+            string[i] === 'o' || string[i] === 'O' ||
+            string[i] === 'u' || string[i] === 'U') {
+            valor += '1';
+        } else {
+            valor += string[i];
+        }
+    }
+    console.log(valor);
+}
+trocaVogais('testediario');
+
+
+function tiraNumeros(string) {
+  // Escreva aqui seu código
+  var valor = '';
+  var i = 0;
+  while(i < string.length){
+    if (string[i] === '1' || string[i] === '2' ||
+        string[i] === '3' || string[i] === '4' ||
+        string[i] === '5' || string[i] === '6' ||
+        string[i] === '7' || string[i] === '8' ||
+        string[i] === '9' || string[i] === '0'){
+          valor += '';
+    }else{
+      valor += string[i];
+    }
+    i++;
+  }
+  return valor;
+}
+console.log(tiraNumeros('t13313e123ste'));
+
+
+//! function somaAteMeta(inicio, meta) {
+//!   // Escreva aqui seu código
+//!     var array = [];// 3
+//!     var valorF = 0;
+//!     for (i = 0; i <= meta; i++){
+//!         inicio++;
+//!         if (valorF != meta) {
+//!             array[i] = inicio;
+//!         } else{
+//!             break;
+//!         }
+//!         valorF = valorF + inicio;
+//!     }
+//!     return (array, valorF);
+//! }
+
+//! console.log(somaAteMeta(2, 15));
+
+
+function subArray(array, subarray) {
+  // Escreva aqui seu código
+    var num = 0;
+    for (n = 0; n < array.length; n++){
+        for (i = 0; i < subarray.length; i++){
+            if (subarray[i] == array[n]) {
+                num++;
+            }
+        }
+    }
+    if (num == subarray.length) {
+        console.log(true);
+        return true;
+    } else {
+        console.log(false);
+        return false;
+    }
+}
+subArray(["1", "2", "3", "4", "5"], ["1", "3", "5"]);
